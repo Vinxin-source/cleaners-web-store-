@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClearGlass Cleaning</title>
+<meta name="description" content="Instant cleaning quotes, easy online booking, and a spotless-guaranteed clean every time.">
+
+<!-- Social preview (static — update this manually per client since crawlers don't run JS) -->
+<meta property="og:title" content="ClearGlass Cleaning">
+<meta property="og:description" content="Instant cleaning quotes, easy online booking, and a spotless-guaranteed clean every time.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230EA5A8'/%3E%3Ccircle cx='16' cy='16' r='7' fill='white' fill-opacity='0.9'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ambient">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header>
+  <nav class="nav-inner glass">
+    <div class="brand-mark">
+      <span class="brand-dot"></span>
+      <span data-biz-name>Business Name</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Contact</a>
+    </div>
+    <a href="#book" class="nav-cta">Book Now</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu glass" id="mobile-menu">
+  <a href="#services">Services</a>
+  <a href="#work">Our Work</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#book">Contact</a>
+  <a href="#book" class="btn btn-primary" style="justify-content:center;">Book Now</a>
+</div>
+
+<!-- ===================== HERO + INSTANT QUOTE ===================== -->
+<section class="hero wrap">
+  <div class="eyebrow" data-hero-eyebrow>Residential &amp; Commercial Cleaning</div>
+  <h1 data-hero-headline>A cleaner home shouldn&#39;t take longer to book than to clean.</h1>
+  <p class="lede" data-hero-subhead>Get an instant price, pick a time, and we show up spotless-ready.</p>
+
+  <div class="calc-card glass-strong glass">
+    <div class="calc-grid">
+      <div class="field">
+        <label for="calc-type">Cleaning type</label>
+        <select id="calc-type"></select>
+      </div>
+      <div class="field">
+        <label for="calc-zip">Zip / Area</label>
+        <input type="text" placeholder="e.g. 92501" id="calc-zip" autocomplete="postal-code">
+      </div>
+      <div class="field">
+        <label id="calc-bedrooms-label">Bedrooms</label>
+        <div class="stepper" role="group" aria-labelledby="calc-bedrooms-label">
+          <button type="button" data-step="-1" data-target="bedrooms" aria-label="Decrease bedrooms">&#8722;</button>
+          <span id="calc-bedrooms">2</span>
+          <button type="button" data-step="1" data-target="bedrooms" aria-label="Increase bedrooms">+</button>
+        </div>
+      </div>
+      <div class="field">
+        <label id="calc-bathrooms-label">Bathrooms</label>
+        <div class="stepper" role="group" aria-labelledby="calc-bathrooms-label">
+          <button type="button" data-step="-1" data-target="bathrooms" aria-label="Decrease bathrooms">&#8722;</button>
+          <span id="calc-bathrooms">1</span>
+          <button type="button" data-step="1" data-target="bathrooms" aria-label="Increase bathrooms">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="price-label">
+        <span class="small">Estimated price</span>
+        <span class="font-mono" style="font-size:13px; color:var(--ink-faint);">Final quote confirmed at booking</span>
+      </div>
+      <div class="price-value font-mono" id="calc-price" data-val="0">$0<sup>+</sup></div>
+    </div>
+
+    <a href="#book" class="btn btn-primary btn-block" data-cta-primary>Get My Instant Quote</a>
+  </div>
+
+  <div class="hero-actions">
+    <a class="btn btn-ghost glass" href="tel:" data-biz-phone-href>
+      &#9742;&nbsp;<span data-cta-secondary>Call Now</span>&nbsp;&mdash;&nbsp;<span data-biz-phone>(555) 010-2020</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== TRUST BADGES ===================== -->
+<section class="wrap" style="padding-top:0;">
+  <div class="badges" id="badges-row"></div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">What We Offer</div>
+    <h2>A cleaning plan for every kind of space</h2>
+  </div>
+  <div class="services-grid" id="services-grid"></div>
+</section>
+
+<!-- ===================== GALLERY (before / after) ===================== -->
+<section id="work" class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Our Work</div>
+    <h2>See the difference for yourself</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item glass wipe">
+      <div class="ba">
+        <div class="before"><span>Before</span></div>
+        <div class="after"><span>After</span></div>
+      </div>
+    </div>
+    <div class="gallery-item glass wipe">
+      <div class="ba">
+        <div class="before"><span>Before</span></div>
+        <div class="after"><span>After</span></div>
+      </div>
+    </div>
+    <div class="gallery-item glass wipe">
+      <div class="ba">
+        <div class="before"><span>Before</span></div>
+        <div class="after"><span>After</span></div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:16px; font-size:13px;">Swap these placeholders for your own before/after photos.</p>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="reviews" class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">What People Say</div>
+    <h2>Trusted by homes and businesses nearby</h2>
+  </div>
+  <div class="testi-grid" id="testi-grid"></div>
+</section>
+
+<!-- ===================== BOOKING / CONTACT ===================== -->
+<section id="book" class="wrap">
+  <div class="book-panel glass glass-strong wipe">
+    <div>
+      <div class="eyebrow" data-biz-area>Serving the Greater Riverside Area</div>
+      <h2>Ready for a spotless space?</h2>
+      <p style="margin-top:10px;">Fill out the form and we&#39;ll confirm your appointment within one business day &mdash; or call us directly for same-day availability.</p>
+      <div style="margin-top:24px;">
+        <div class="footer-phone" data-biz-phone>(555) 010-2020</div>
+        <div class="footer-meta" data-biz-hours>Mon&ndash;Sat, 8am&ndash;6pm</div>
+      </div>
+      <p id="quote-summary" class="footer-meta" style="margin-top:14px;"></p>
+    </div>
+
+    <form class="book-form" id="booking-form">
+      <input type="hidden" id="quote-summary-hidden" name="quote_summary" value="">
+      <!-- honeypot spam trap: real users never fill this in -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <label class="sr-only" for="booking-name">Full name</label>
+      <input type="text" id="booking-name" name="name" placeholder="Full name" required autocomplete="name">
+
+      <label class="sr-only" for="booking-phone">Phone number</label>
+      <input type="tel" id="booking-phone" name="phone" placeholder="Phone number" required autocomplete="tel">
+
+      <label class="sr-only" for="booking-service">Select a service</label>
+      <select id="booking-service" name="service" required></select>
+
+      <label class="sr-only" for="booking-notes">Additional notes</label>
+      <textarea id="booking-notes" name="notes" placeholder="Anything we should know? (pets, access, special requests)"></textarea>
+
+      <button type="submit" class="btn btn-primary">Request Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="wrap">
+  <div class="brand-mark" style="justify-content:center; margin-bottom:10px;">
+    <span class="brand-dot"></span>
+    <span data-biz-name>Business Name</span>
+  </div>
+  <p class="footer-meta">&copy; <span id="year"></span> <span data-biz-name>Business Name</span>. All rights reserved.</p>
+</footer>
+
+<button class="sound-toggle glass" id="sound-toggle" aria-label="Toggle click sound"></button>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
